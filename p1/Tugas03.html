@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicons -->
+        <link href="Image/BSI.png" rel="icon">
+
+        <script language="javascript">
+            mess = "Christy Dany Tallane^Tugas03^";
+            scrollSpeed = 250;
+            lineDelay = 0;
+            txt = "";
+            function scrollText(pos) {
+                if (mess.charAt(pos) != '^') {
+                    txt=txt+mess.charAt(pos);
+                    document.title=txt;
+                    prt=scrollSpeed;
+                }
+                else {
+                    prt = lineDelay;
+                    txt = "";
+                    if (pos==mess.length -1) pos=-1;
+                }
+                pos++;
+                setTimeout("scrollText('"+pos+"')",prt)
+            }
+            scrollText(0);
+        </script>
+        <title>Tugas 03</title>
+    </head>
+    <body bgcolor="#000000">
+        <h1 style="color:#000000; text-align: center;"><marquee width="48%" bgcolor="#ffffff"><i>Tabel Daftar Produk</i></marquee></h1>
+            <table cellpadding="3" border="1" align="center">
+                <thead>
+                    <tr>    
+                        <td colspan="3" align="center" style=" background-color:  #32a5be;"> <b>DAFTAR PRODUK</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center" width="120" rowspan="3" bgcolor="#50fa50"><img src="Image/EOS.jpg" alt="" width="100px" height="100px"></td>
+                        <td width="70" bgcolor="#ff4040">Nama<br>Produk</td>
+                        <td bgcolor="#ffec40">Canon EOS M10 Kit EF-M 15-45mm</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ff4040">Harga</td>
+                        <td bgcolor="#ffec40">Rp4.899.000</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ff4040">Fitur <br> Produk</b></td>
+                        <td width="420" bgcolor="#ffec40">
+                            <ul>
+                                <li style="color: black;">Kamera mirorless</li>
+                                <li style="color: black;">Efektifitas pixel : 18 MP</li>
+                                <li style="color: black;">Tipe sensor : CMOS DIGIC 6</li>
+                                <li style="color: black;">Layar 3.0 inch</li>
+                                <li style="color: black;">Memiliki lampu flash dengan jarak jangkauan hingga 5 </br> meter</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </body>
+
+</html>
